@@ -1,0 +1,72 @@
+#TODO LIST
+#1. integrated with flask  
+#2. improve 30FPS with 2 Lane
+#3. Hardware PCB Support 4 Lane    
+#4. our cam_imx415r5.py turn 4K to 720P        
+
+#test_bg2Socket.py for testing text Receiving via TCP                                         8 AUG 2025
+#test_bg3filter.py for provide future developemt to filter text for any registers             8 AUG 2025     
+#binding with our IP  and using sudo -E python3 test_bg2.py                                   8 AUG 2025
+#add textcolor & blackground color with scalable 0-255                                        8 AUG 2025                                                                                            
+#adding camport for easier to change                                                          8 AUG 2025
+
+
+{
+  "Video": {
+    "Videoresolution": "1080P",       # Default 4K , need to scale to 720p (1280x720), 1080p (1920x1080), 1440p (2560x1440) , 2160p (3840x2160) (aspect ratio 16:9 only)
+    "Framerate": "25FPS",            # 26FPS? 
+    "brightness": 80,                # 100% === VIDEO SETTINGS ===                 
+    "contrast": 70,                  # 100% === VIDEO SETTINGS ===             
+    "saturation": 50,                # 100% === VIDEO SETTINGS ===           
+    "exposure": 1050,                # === CAMERA SETUP ===                
+    "Analog_gain": 64,               # === CAMERA SETUP ===                
+    "Cam_port": 22,                  # === ORANGE PI CM5 PORT ===  
+    "Cam_resolution":"4K",
+    "Cam_FPS":"25FPS"                    
+  },
+  "Onscreen": {
+    "Register": "GENERIC",           #GENERIC,EPSON,VERIFONE,DRESSER_WAYNE
+    "Titler": "HOME THAILAND",
+    "Titlerdisplay": True,           # === DISPLAY CONTROL FLAGS ===
+    "TDsync": True,
+    "TDdisplay": True,               # === DISPLAY CONTROL FLAGS ===
+    "Timeformate": "12H",            # 12H, 24H def get_formatted_timestamp
+    "Dateformat": "MM/DD/YY",        # MM/DD/YY, DD/MM/YY, YY/MM/DD def get_formatted_timestamp
+    "Veritocal Pos": 35,            # 20===(10-700) DIMENSIONS & POSITION === it seem our video encoder turn 4K to 720P
+    "Horizontal Pos": 15,            # 15===(10-1250) DIMENSIONS & POSITION === it seem our video encoder turn 4K to 720P
+    "Displayline": 42,               # 42=== DIMENSIONS & POSITION === 
+    "Displaywidth": 60,              # 60=== DIMENSIONS & POSITION ===
+    "Langauge": "ENG",
+    "TextSize": 2,                   # === TEXT SETTINGS ===
+    "TextBold": 1,                   # === TEXT SETTINGS ===
+    "Textcolor": "white",            # black,white,red,green,blue,orange Color map for named colors
+    "Backgroundcolor": "black",        # black,white,red,green,blue,orange Color map for named colors
+    "Textforeground": 255,           # 0-255 0 = Low, 255 = High color === TEXT SETTINGS ===
+    "Textbackground": 60,           # 0-255 0 = LOW, 255 = High color === TEXT SETTINGS === 
+    "Screenblanking": 10,            # === DISPLAY CONTROL FLAGS ===      
+    "Leftjustify": False,            # === DISPLAY CONTROL FLAGS ===
+    "Scrolldelay": False,            # === DISPLAY CONTROL FLAGS ===
+    "TextDisplay": True              # overlay text control === DISPLAY CONTROL FLAGS ===
+  },
+  "Communications": {
+    "Streammode": "MJPEG",           # RTSP / MJPEG 
+    "IP": "192.168.1.47",            #=== COMMUNICATION SETTINGS ===    
+    "Gateway": "192.168.1.1",        #=== COMMUNICATION SETTINGS ===    
+    "Subnet": "255.255.255.0",       #=== COMMUNICATION SETTINGS ===     
+    "Target IP": "192.168.1.43",     #=== COMMUNICATION SETTINGS ===    
+    "Streamport": 8000,              # 1-10000 PORT === COMMUNICATION SETTINGS ===
+    "Httpport": 5000,                # 1-10000 PORT === COMMUNICATION SETTINGS ===
+    "Overlayport": 9100,             # 1-10000 PORT === COMMUNICATION SETTINGS ===
+    "Mirorport": 9101,               # 1-10000 PORT === COMMUNICATION SETTINGS ===
+    "Miror_Output": False,           # TRUE = ENABLE, FALSE = DISABLE === COMMUNICATION SETTINGS ===
+    "Textprotocol": "TCP",           # TCP, UPD === COMMUNICATION SETTINGS ===
+    "interface" : "eth0"             # === ORANGE PI CM5 PORT ===
+  },
+  "Password": {
+    "Username": "admin",
+    "Password": "admin123",
+    "FactoryReset": False,
+    "factoryname": "admin",
+    "factoryPassword": "admin123"
+  }
+}
