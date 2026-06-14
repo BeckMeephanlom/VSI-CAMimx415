@@ -1,14 +1,3 @@
-#TODO LIST
-#1. integrated with flask  
-#2. improve 30FPS with 2 Lane
-#3. Hardware PCB Support 4 Lane    
-#4. our cam_imx415r1312.py turn 4K to 720P        
-
-#test_bg2Socket.py for testing text Receiving via TCP                                         8 AUG 2025
-#test_bg3filter.py for provide future developemt to filter text for any registers             8 AUG 2025     
-#binding with our IP  and using sudo -E python3 test_bg2.py                                   8 AUG 2025
-#add textcolor & blackground color with scalable 0-255                                        8 AUG 2025                                                                                            
-#adding camport for easier to change                                                          8 AUG 2025
 System:
   Version: "1312"
   Firmware: "cam_imx415.zip"
