@@ -10,5 +10,5 @@
 #add textcolor & blackground color with scalable 0-255                                        8 AUG 2025                                                                                            
 #adding camport for easier to change                                                          8 AUG 2025
 System:
-  Version: "v1312"
+  Version: "1312"
   Firmware: "cam_imx415.zip"
