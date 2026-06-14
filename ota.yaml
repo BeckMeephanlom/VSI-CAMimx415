@@ -11,4 +11,4 @@
 #adding camport for easier to change                                                          8 AUG 2025
 System:
   Version: "100R2"
-  Firmware: "firmware-100R2.tar.gz"
+  Firmware: "cam_imx415.zip"
